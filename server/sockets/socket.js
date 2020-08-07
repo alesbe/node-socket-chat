@@ -28,16 +28,19 @@ io.on('connection', (client) => {
 
         //Broadcast la nueva lista de personas
         client.broadcast.to(data.sala).emit('listaPersona', usuarios.getPersonasPorSala(data.sala))
+        client.broadcast.to(data.sala).emit('crearMensaje', crearMensaje('Admin', `${data.nombre} se unió`))
 
         //Hace un callback de la lista de personas
         callback(usuarios.getPersonasPorSala(data.sala));
     })
 
-    client.on('crearMensaje', (data) => {
+    client.on('crearMensaje', (data, callback) => {
         let persona = usuarios.getPersona(client.id)
 
         let mensaje = crearMensaje(persona.nombre, data.mensaje)
         client.broadcast.to(persona.sala).emit('crearMensaje', mensaje)
+
+        callback(mensaje)
     })
 
     // Cuando el cliente se desconecta
@@ -46,8 +49,8 @@ io.on('connection', (client) => {
         let personaBorrada = usuarios.borrarPersona(client.id)
 
         //Crea un mensaje y lista la nueva lista de personas
-        client.broadcast.to(personaBorrada.sala).emit('crearMensaje', crearMensaje('Admin', `${personaBorrada.nombre} salió`))
-        client.broadcast.to(personaBorrada.sala).emit('listaPersona', usuarios.getPersonasPorSala())
+        client.broadcast.to(personaBorrada.sala).emit('crearMensaje', crearMensaje('Admin', `${personaBorrada.nombre} salió del chat`))
+        client.broadcast.to(personaBorrada.sala).emit('listaPersona', usuarios.getPersonasPorSala(personaBorrada.sala))
     })
 
     client.on('mensajePrivado', (data) => {
