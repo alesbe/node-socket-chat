@@ -1,6 +1,8 @@
 # Socket chat
 Chat online hecho con [NodeJS](https://nodejs.org/en/), [Express](https://expressjs.com/es/) y [socket.io](https://socket.io/)
 
+Aplicación subida en heroku: [chat](https://nexobeta28-socketchat.herokuapp.com/)
+
 ![chat](https://i.imgur.com/aCH9c4s.png)
 
 ## Características
