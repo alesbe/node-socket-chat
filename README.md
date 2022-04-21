@@ -1,6 +1,8 @@
 # Socket chat
 Online chat made with [NodeJS](https://nodejs.org/en/), [Express](https://expressjs.com/es/) y [socket.io](https://socket.io/)
 
+_Note: User interface is a template, this project was oriented to backend socket development!_
+
 ![chat](https://i.imgur.com/aCH9c4s.png)
 
 ## Features
