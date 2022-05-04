@@ -24,6 +24,11 @@ _Note: User interface is a template, this project was oriented to backend socket
 ![smartphone](https://i.imgur.com/JzAhPEB.png)
 
 ## Install
+
+### Docker
+[Docker image](https://hub.docker.com/repository/docker/alesbe/node-socket-chat)
+
+### Run the app yourself
 Install dependencies:
 ```
 npm install
