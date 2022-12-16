@@ -23,12 +23,16 @@ _Note: The UI it's a template, I made the backend and implemented the template t
 ### Smartphone view
 ![smartphone](https://i.imgur.com/JzAhPEB.png)
 
-## Install
+## Install 🛠️
 
-### Docker
-[Docker image](https://hub.docker.com/repository/docker/alesbe/node-socket-chat)
+### Docker 🐋
+#### 1.- Build the image
+```docker build -t alesbe/socket-chat:1.0 .```
 
-### Run the app yourself
+#### 2.- Run it
+```docker run --name socket-chat -p 8000:8000 alesbe/socket-chat:1.0```
+
+### Manual installation 🔨
 Install dependencies:
 ```
 npm install
