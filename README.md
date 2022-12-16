@@ -1,18 +1,18 @@
-# Socket chat
+# Socket chat 💬
 Online chat made with [NodeJS](https://nodejs.org/en/), [Express](https://expressjs.com/es/) y [socket.io](https://socket.io/)
 
-_Note: User interface is a template, this project was oriented to backend socket development!_
+_Note: The UI it's a template, I made the backend and implemented the template to send and recieve messages!_
 
 ![chat](https://i.imgur.com/aCH9c4s.png)
 
-## Features
+## Features 🌟
 - Unique chat rooms
 - Name identification by dynamic IDs
 - Server broadcasts of users entering and leaving the rooms
 - List of connected users
 - Emoji support
 
-## Images
+## Images 🖼️
 
 ### Landing page
 ![entrada](https://i.imgur.com/bFWT1Ib.png)
